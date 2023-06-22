@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Add Cat</h1>
         <form action="" method="post">
             <table class="table">
                 <tr>
