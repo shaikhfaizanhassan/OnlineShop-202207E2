@@ -16,7 +16,7 @@
         </div>
     <div class="card">
                     <div class="card-header">
-                        <h5>View Category</h5>
+                        <h5>View Brand</h5>
                     </div>
                     <div class="card-body table-border-style">
                         <div class="table-responsive">
@@ -24,13 +24,13 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Category Name</th>
+                                        <th>Brand Name</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 <?php 
-                $fetch = mysqli_query($con,"select * from category");
+                $fetch = mysqli_query($con,"select * from brand");
                 while($row = mysqli_fetch_array($fetch))
                 {
             ?>

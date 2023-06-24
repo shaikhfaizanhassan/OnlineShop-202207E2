@@ -13,14 +13,14 @@
 <body>
     <div class="card">
         <div class="card-header">
-            <h5>View Category</h5>
+            <h5>Add New Brand</h5>
         </div>
         <div class="card-body table-border-style">
             <form action="" method="post">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Category</label>
+                    <label for="exampleInputEmail1">Brand</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Enter email" name="txtcat">
+                        placeholder="Enter email" name="txtbrand">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                         else.</small>
                 </div>
@@ -32,13 +32,13 @@
             <?php 
             if(isset($_POST["btnsave"]))
             {
-                $catname = $_POST["txtcat"];
-                $sql = mysqli_query($con,"insert into category (cname)
-                values ('$catname')");
+                $brandname = $_POST["txtbrand"];
+                $sql = mysqli_query($con,"insert into brand (bname)
+                values ('$brandname')");
 
                 if($sql)
                 {
-                    echo "$catname Save";
+                    echo "$brandname Save";
                 }
                 else
                 {
