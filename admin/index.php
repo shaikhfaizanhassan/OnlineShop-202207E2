@@ -91,7 +91,7 @@
                                     class="feather icon-layout"></i></span><span class="pcoded-mtext">Product</span></a>
                         <ul class="pcoded-submenu">
                             <li><a href="index.php?AddProduct" target="_blank">Add Product</a></li>
-                            <li><a href="layout-horizontal.html" target="_blank">View Product</a></li>
+                            <li><a href="index.php?ViewProduct" target="_blank">View Product</a></li>
                         </ul>
                     </li>
                     <li class="nav-item pcoded-hasmenu">
@@ -398,6 +398,10 @@
 					{
 						include("AddProduct.php");
 					}
+                    else if(isset($_GET["ViewProduct"]))
+                    {
+                        include("ViewProduct.php");
+                    }
                     else
                     {
                         echo '
