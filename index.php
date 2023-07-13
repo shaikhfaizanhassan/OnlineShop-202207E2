@@ -1,5 +1,6 @@
 <?php
 include("connection.php");
+session_start();
 ?>
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -83,6 +84,8 @@ include("connection.php");
                                     </li>
                                     
                                     <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="customerlogin.php">Login</a></li>
+                                    
                                 </ul>
                             </nav>
                         </div>
@@ -182,16 +185,28 @@ include("connection.php");
                         $fetchproduct = mysqli_query($con,"select * from product");
                         while($row = mysqli_fetch_array($fetchproduct))
                         {
-
-
-                        
                     ?>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-popular-items mb-50 text-center">
                             <div class="popular-img">
                                 <img src="admin/pimages/<?php echo $row[6]  ?>" width="300" height="400" alt="">
                                 <div class="img-cap">
-                                    <span>Add to cart</span>
+                                    <?php
+                                        // $hh = mysqli_query($con,"select * from  customertb");
+                                        // $h = mysqli_fetch_array($hh);
+                                        // $_SESSION["customerid"] = $h[0];
+                                        // if(isset($_SESSION["customerid"])==null)
+                                        // {
+                                        //     echo '<script>alert("No")</script>';
+                                        // }
+                                        // else
+                                        // {
+                                        //     echo '<script>alert("YES")</script>';
+                                        // }
+                                    
+                                    ?>
+
+                                    <a href=""><span>Add to cart</span></a>
                                 </div>
                                 <div class="favorit-items">
                                     <span class="flaticon-heart"></span>

@@ -1,3 +1,11 @@
+<?php 
+    session_start();
+    if(isset($_SESSION["adminid"])==null)
+	{
+		header("location:adminlogin.php");
+	}
+	else{
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +51,18 @@
                     <div class="main-menu-header">
                         <img class="img-radius" src="assets/images/user/avatar-2.jpg" alt="User-Profile-Image">
                         <div class="user-details">
-                            <span>John Doe</span>
+                            <span>
+                                
+                            <?php 
+                                echo $_SESSION["adminname"]
+
+                            ?>
+
+
+
+
+
+                            </span>
                             <div id="more-details">UX Designer<i class="fa fa-chevron-down m-l-5"></i></div>
                         </div>
                     </div>
@@ -270,7 +289,7 @@
                                         <img class="img-radius" src="assets/images/user/avatar-1.jpg"
                                             alt="Generic placeholder image">
                                         <div class="media-body">
-                                            <p><strong>John Doe</strong><span class="n-time text-muted"><i
+                                            <p><strong>John Dodsdde</strong><span class="n-time text-muted"><i
                                                         class="icon feather icon-clock m-r-10"></i>5 min</span></p>
                                             <p>New ticket Added</p>
                                         </div>
@@ -327,7 +346,7 @@
                         <div class="dropdown-menu dropdown-menu-right profile-notification">
                             <div class="pro-head">
                                 <img src="assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
-                                <span>John Doe</span>
+                                <span>Johndsfsdf Doe</span>
                                 <a href="auth-signin.html" class="dud-logout" title="Logout">
                                     <i class="feather icon-log-out"></i>
                                 </a>
@@ -337,8 +356,8 @@
                                         Profile</a></li>
                                 <li><a href="email_inbox.html" class="dropdown-item"><i class="feather icon-mail"></i>
                                         My Messages</a></li>
-                                <li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i>
-                                        Lock Screen</a></li>
+                                <li><a href="logout.php" class="dropdown-item"><i class="feather icon-lock"></i>
+                                        Lock Out</a></li>
                             </ul>
                         </div>
                     </div>
@@ -479,3 +498,5 @@
 </body>
 
 </html>
+
+<?php } ?>
